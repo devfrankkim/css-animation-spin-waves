@@ -1,0 +1,92 @@
+html,
+body {
+  height: 100%;
+  font-size: 10px;
+}
+
+body {
+  background-color: #f6c4f8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dot spin */
+.dots {
+  width: 40rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 30rem;
+  animation: spin 1s ease-in-out infinite;
+}
+
+.dot {
+  background-color: rgb(255, 255, 255);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+/* spin */
+
+@keyframes spin {
+  0% {
+    transform: none;
+  }
+
+  50% {
+    transform: rotate(0.5turn);
+  }
+
+  100% {
+    transform: rotate(0.5turn);
+  }
+}
+
+/* Line 3D */
+.lines {
+  width: 17rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.line {
+  width: 2.5rem;
+  height: 5rem;
+  background-color: white;
+  animation: waves 1s ease-in-out infinite;
+}
+
+@keyframes waves {
+  0% {
+    transform: none;
+  }
+  25% {
+    transform: scaleY(2.5);
+  }
+  50% {
+    transform: none;
+  }
+  100% {
+    transform: none;
+  }
+}
+
+/*
+'animation-delay'
+*/
+
+.line:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.line:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.line:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.line:nth-child(5) {
+  animation-delay: 0.4s;
+}
